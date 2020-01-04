@@ -1,6 +1,6 @@
 var fs = require('fs');
 var BDom = require('beautiful-dom');
-var path = '/Users/satodano/ImgReader.txt';
+var path = '/Users/satodano/ImgReader.html';
 var m, urls = [];
 var str2 = fs.readFileSync(path, 'utf8', function (err, data) {
     if (err) {
@@ -28,7 +28,6 @@ for (var _i = 0, ImgNode_1 = ImgNode; _i < ImgNode_1.length; _i++) {
     ProcessedStr += val.outerHTML;
     ProcessedStr += "\n";
 }
-ProcessedStr += "^M";
 //Write processed code to the img processor file.
 fs.writeFile(path, ProcessedStr, function (err) {
     if (err) {

@@ -2,7 +2,7 @@ const fs = require('fs');
 const BDom = require('beautiful-dom');
 
 
-let path='/Users/satodano/ImgReader.txt';
+let path='/Users/satodano/ImgReader.html';
 var m,
     urls = [];
 let str2 = fs.readFileSync(path,'utf8',function (err, data)
@@ -39,8 +39,6 @@ for(var val of ImgNode)
     ProcessedStr+=val.outerHTML;
     ProcessedStr+="\n";
   }
-ProcessedStr+="^M";
-
 
 //Write processed code to the img processor file.
 fs.writeFile(path,ProcessedStr, function(err) {
