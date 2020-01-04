@@ -31,13 +31,15 @@ while ( m = rex.exec(str2))
 //Didn't Work.
 
 let dom=new BDom(str2);
-let ImgNode = dom.querySelectorAll('img')
+let ImgNode = dom.querySelectorAll('img');
 let ProcessedStr = '';
 for(var val of ImgNode)
   {
-    console.log(val.outerHTML)
-    ProcessedStr+=val.outerHTML;
+    let tempStr=val.outerHTML;
+   console.log(tempStr);
+    ProcessedStr+=tempStr;
     ProcessedStr+="\n";
+      
   }
 
 //Write processed code to the img processor file.

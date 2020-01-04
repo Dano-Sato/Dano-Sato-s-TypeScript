@@ -24,8 +24,9 @@ var ImgNode = dom.querySelectorAll('img');
 var ProcessedStr = '';
 for (var _i = 0, ImgNode_1 = ImgNode; _i < ImgNode_1.length; _i++) {
     var val = ImgNode_1[_i];
-    console.log(val.outerHTML);
-    ProcessedStr += val.outerHTML;
+    var tempStr = val.outerHTML;
+    console.log(tempStr);
+    ProcessedStr += tempStr;
     ProcessedStr += "\n";
 }
 //Write processed code to the img processor file.
