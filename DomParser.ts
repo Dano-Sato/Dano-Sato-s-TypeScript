@@ -31,7 +31,7 @@ while ( m = rex.exec(str2))
 //Didn't Work.
 
 let dom=new BDom(str2);
-let ImgNode = dom.querySelectorAll('img');
+let ImgNode = dom2.querySelectorAll('img');
 let ProcessedStr = '';
 for(var val of ImgNode)
   {
