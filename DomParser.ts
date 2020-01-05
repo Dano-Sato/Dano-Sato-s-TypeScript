@@ -1,3 +1,5 @@
+//Get whole string from the Img processor file.
+
 const fs = require('fs');
 const BDom = require('beautiful-dom');
 
@@ -14,21 +16,6 @@ let str2 = fs.readFileSync(path,'utf8',function (err, data)
                          }
                   
                         );
-
-//Get whole string from the Img processor file.
-
-
-//Process the html code to get img sources.
-//Regular Expression method.
-/*
-var str = '<img src="http://site.org/one.jpg />\n <img src="http://site.org/two.jpg />',
-    rex = /<img[^>]+src="?([^"\s]+)"?\s*\/>/g,
-    rex2 = ;
-while ( m = rex.exec(str2)) 
-{
-  urls.push( m[1] );
-}*/
-//Didn't Work.
 
 let dom=new BDom(str2);
 let ImgNode = dom2.querySelectorAll('img');
