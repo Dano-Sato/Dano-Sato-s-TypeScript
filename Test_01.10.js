@@ -53,3 +53,21 @@ function multiply1(x, y) {
     return x * y;
 }
 var multiply2 = function (x, y) { return x * y; }; //람다 표현식?
+var sum = /** @class */ (function () {
+    function sum(i, j) {
+        this.i = i;
+        this.j = j;
+    }
+    sum.prototype.Add = function () { return (this.i + this.j); };
+    return sum;
+}());
+window.onload = function () {
+    var button = document.createElement('button');
+    button.innerText = "SUM";
+    button.onclick = function () {
+        var first = parseFloat(document.getElementById("Text1").value);
+        var second = parseFloat(document.getElementById("Text2").value);
+        var total = new sum(first, second);
+        alert("Add of Two number " + total.Add());
+    };
+};
